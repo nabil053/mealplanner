@@ -55,9 +55,9 @@ export const Meals = () => {
     data
   )[0] as FavoriteMeals;
   const selectedFavs =
-    PFMeals.people?.nodes[0].favoriteMeals.nodes.map(
-      (favMeal) => favMeal.meal?.rowId
-    ) || [];
+  PFMeals?.people?.nodes?.[0]?.favoriteMeals?.nodes?.map(
+    (favMeal) => favMeal.meal?.rowId
+  ) ?? [];
 
   const selectedTags = data.gqLocalState.selectedMealTags || [];
 
